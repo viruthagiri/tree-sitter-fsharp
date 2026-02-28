@@ -13,3 +13,10 @@ func TestCanLoadGrammar(t *testing.T) {
 		t.Errorf("Error loading Fsharp grammar")
 	}
 }
+
+func TestCanLoadSignatureGrammar(t *testing.T) {
+	language := tree_sitter.NewLanguage(tree_sitter_fsharp.LanguageSignature())
+	if language == nil {
+		t.Errorf("Error loading Fsharp signature grammar")
+	}
+}
